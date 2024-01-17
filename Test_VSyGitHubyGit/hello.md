@@ -1,2 +1,2 @@
 Hello World !
-Test from VS Code with Git.
+Test from VS Code with Git. Now connected ?
