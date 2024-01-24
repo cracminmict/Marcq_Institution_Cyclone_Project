@@ -1,4 +1,7 @@
-h1 {box-shadow: 2px 2px 5px 1px rgb(84, 235, 255);}
+h1 {
+    box-shadow: 2px 2px 5px 1px rgb(84, 235, 255);
+    text-align: center;
+}
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: #fff3cc;
