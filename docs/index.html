@@ -11,4 +11,83 @@
     <h2>For Marcq Institution</h2>
     <p>Ce site est actuellement en développement. Veuillez patienter. </p>
     <p>Vous pouvez envoyer un mail à <a href="mailto:opwzhdm5@duck.com" target="_blank">opwzhdm5@duck.com</a> pour participer au projet ou poser vos questions.</p>
+    <p>Jouez à Snake en attendant !</p>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        canvas {
+            border: 1px solid #ccc;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="snakeCanvas" width="400" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById('snakeCanvas');
+        const ctx = canvas.getContext('2d');
+
+        const boxSize = 20;
+        let snake = [{x: 10, y: 10}];
+        let direction = 'right';
+
+        function draw() {
+            // Clear canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw snake
+            for (let i = 0; i < snake.length; i++) {
+                ctx.fillStyle = i === 0 ? 'green' : 'white';
+                ctx.fillRect(snake[i].x * boxSize, snake[i].y * boxSize, boxSize, boxSize);
+                ctx.strokeStyle = 'black';
+                ctx.strokeRect(snake[i].x * boxSize, snake[i].y * boxSize, boxSize, boxSize);
+            }
+        }
+
+        function move() {
+            let headX = snake[0].x;
+            let headY = snake[0].y;
+
+            if (direction === 'right') headX++;
+            if (direction === 'left') headX--;
+            if (direction === 'up') headY--;
+            if (direction === 'down') headY++;
+
+            const newHead = { x: headX, y: headY };
+            snake.unshift(newHead);
+        }
+
+        function checkCollision() {
+            const head = snake[0];
+            if (head.x < 0 || head.x >= canvas.width / boxSize || head.y < 0 || head.y >= canvas.height / boxSize) {
+                clearInterval(gameInterval);
+                alert('Game Over!');
+            }
+        }
+
+        function gameLoop() {
+            move();
+            checkCollision();
+            draw();
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight' && direction !== 'left') direction = 'right';
+            if (event.key === 'ArrowLeft' && direction !== 'right') direction = 'left';
+            if (event.key === 'ArrowUp' && direction !== 'down') direction = 'up';
+            if (event.key === 'ArrowDown' && direction !== 'up') direction = 'down';
+        });
+
+        const gameInterval = setInterval(gameLoop, 100);
+
+    </script>
+</body>
+</html>
+
 </body>
