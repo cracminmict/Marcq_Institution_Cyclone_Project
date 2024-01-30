@@ -1,49 +1,41 @@
 body {
-font-family: 'Courier New', Courier, monospace;
-    background-color: #fff3cc;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #fff3cc;
+  cursor: auto;
 }
 
 h1 {
-    text-shadow: 2px 2px 1px rgb(0, 0, 0);
-    text-align: center;
+  
 } 
 
-.clickable {
+.button {
   width: 200px;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  border: 0;
-  line-height: 2.5;
-  padding: 0 20px;
+  line-height: 200%;
   font-size: 1rem;
   text-align: center;
-  color: #fff;
-  text-shadow: 1px 1px 1px #000;
-  border-radius: 10px;
-  background-color: rgb(255, 196, 0);
-  background-image: linear-gradient(
-    to top left,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.2) 30%,
-      rgba(0, 0, 0, 0)
-    );
-  box-shadow:
-    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
-  }
-  
-  .styled:hover {
-    background-color: rgb(255, 217, 0);
-  }
-  
-  .styled:active {
-    box-shadow:
-      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
-  }
+  color: #ffffff;
+  border-radius: 5px;
+  border: 0px;
+  background-color: rgb(0, 167, 36);
+}
 
+.button:hover {
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  line-height: 200%;
+  font-size: 1rem;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 5px;
+  border: 0px;
+  background-color: rgb(3, 148, 34);
+  }
+  
   .teacher_list {
     list-style: none;
-    list
   }
