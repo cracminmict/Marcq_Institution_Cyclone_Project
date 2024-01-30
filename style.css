@@ -4,10 +4,6 @@ body {
   cursor: auto;
 }
 
-h1 {
-  
-} 
-
 .button {
   width: 200px;
   justify-content: center;
@@ -35,7 +31,4 @@ h1 {
   border: 0px;
   background-color: rgb(3, 148, 34);
   }
-  
-  .teacher_list {
-    list-style: none;
-  }
+
