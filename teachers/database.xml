@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="teachers.xsl"?>
+
+<prof> 
+    <lesgp>
+        <nom>Lesgourgues</nom>
+        <prenom>Patrice</prenom>
+        <matiere>SES</matiere>
+    </lesgp>
+
+    <wojcr>
+        <nom>Wojcik</nom>
+        <prenom>Rudy</prenom>
+        <matiere>Mathématiques</matiere>
+    </wojcr>
+</prof>
